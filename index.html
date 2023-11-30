@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="StyleDreamer: Make Your 3D Style Avatar From a Single View with Consistency Score Distillation">
+        content="StyleDreamer: Make Your 3D Style Avatar From a Single View with Multi-View Consistency Score Distillation">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>StyleDreamer: Make Your 3D Style Avatar From a Single View with Consistency Score Distillation</title>
@@ -58,7 +58,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">StyleDreamer: Make Your 3D Style Avatar From a Single View with Consistency Score Distillation</h1>
+          <h1 class="title is-1 publication-title">StyleDreamer: Make Your 3D Style Avatar From a Single View with Multi-View Consistency Score Distillation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block"> Anonymous authors </span>
 <!--            <span class="author-block">-->
@@ -81,7 +81,7 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">ICLR 2024 Conference Submission</span>
+            <span class="author-block">CVPR 2024 Conference Submission</span>
           </div>
 
 <!--          <div class="column has-text-centered">-->
@@ -137,64 +137,65 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
+      <img src="./static/videos/teaser.gif" alt="method" class="center">
+<!--        <video id="teaser" autoplay muted loop playsinline height="100%">-->
+<!--        <source src="./static/videos/teaser.gif"-->
+<!--                type="video/mp4">-->
+<!--      </video>-->
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">StyleDreamer</span> can create high-fidelity 3D Style Avatar from a single view.
+<b>TL;DR: </b> StyleDreamer creates high-fidelity 3D Style Avatar from a single view.
 
-          In this case, people can synthesize their personal avatars in different styles conveniently.
+<!--          In this way, people can create their avatars in diversity styles handily.-->
       </h2>
     </div>
   </div>
 </section>
 
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-chair-tp">
-            <div class="content has-text-centered">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/p2-fauvism.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-    </div>
-        <div class="item item-shiba">
-            <div class="content has-text-centered">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/p2-modig.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-    </div>
-        <div class="item item-fullbody">
-            <div class="content has-text-centered">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/p2-van.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        </div>
-        <div class="item item-blueshirt">
-            <div class="content has-text-centered">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/p2-efl.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        </div>
-        <div class="item item-demo5">
-            <div class="content has-text-centered">
-          <video poster="" id="demo5" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/p2-bust.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        </div>
+<!--<section class="hero is-light is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--        <div class="item item-chair-tp">-->
+<!--            <div class="content has-text-centered">-->
+<!--          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/person_1.gif"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--        <div class="item item-shiba">-->
+<!--            <div class="content has-text-centered">-->
+<!--          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/p2-modig.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--        <div class="item item-fullbody">-->
+<!--            <div class="content has-text-centered">-->
+<!--          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/p2-van.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        </div>-->
+<!--        <div class="item item-blueshirt">-->
+<!--            <div class="content has-text-centered">-->
+<!--          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/p2-efl.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        </div>-->
+<!--        <div class="item item-demo5">-->
+<!--            <div class="content has-text-centered">-->
+<!--          <video poster="" id="demo5" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/p2-bust.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        </div>-->
 <!--        <div class="item item-demo6">-->
 <!--            <div class="content has-text-centered">-->
 <!--          <video poster="" id="demo6" autoplay controls muted loop playsinline height="100%">-->
@@ -275,10 +276,10 @@
 <!--          </video>-->
 <!--        </div>-->
 <!--        </div>-->
-      </div>
-    </div>
-  </div>
-</section>
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 
 
 <section class="section">
@@ -286,17 +287,17 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
-              Recent generative methods have shown remarkable capabilities in producing stylized 3D head avatars.
-              Nonetheless, current methods necessitate multi-view images for constructing 3D models, which limits their usage in the real world where most images are captured from a single angle.
-In this pper, we investigate a practical <span class="dnerf">One-to-Style</span> task, generating the 3D style avatar with a single view.
-              The task presents two challenges: 1) Content consistency and 2) Style consistency across multiple views of the generated images.
-              We propose a novel Consistency Score Distillation (CSD) to ensure consistent stylization across multiple views while preserving the identity of each view using the 3D GAN.
-In this method, the style distribution of the rendered images from all views is supervised to match the style of the given single view, based on the provided edit instruction.
-              We have formulated a dataset for One-to-Style with in-the-wild face images and the most commonly used style.
-Experimental results show that our approach outperforms existing methods in terms of stability and quality, indicating its potential applications in the real world.
+              In this paper, we investigate a practical <span class="dnerf">One-to-Style</span> task that generates the 3D style avatar with a single view.
+              The task presents two challenges: 1) <b>Content</b> consistency and 2) <b>Style</b> consistency across multiple views of the 3D style avatar.
+              We propose <span class="dnerf">StyleDreamer</span> to address the two problems.
+              For the first problem, our StyleDreamer employs a 3D GAN to preserve the identity of each view.
+              For the second problem, we propose a novel Multi-View Consistency Score Distillation (MV-CSD) to ensure performing consistent stylization across multiple views.
+              In this way, the style of the rendered images from all views is supervised to match the style of the given view, based on the provided edit instruction.
+              Experimental results show that our approach outperforms existing methods in terms of stability and quality, indicating its potential applications in the real world.
+
           </p>
         </div>
       </div>
@@ -309,30 +310,75 @@ Experimental results show that our approach outperforms existing methods in term
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Pipeline</h2>
+        <h2 class="title is-3">How it works</h2>
+      </div></div>
         <div class="content has-text-justified">
 <!--        <p>-->
 <!--            Generating novel views for general scenes or objects from only a single image is inherently challenging-->
 <!--            due to the difficulty of inferring both geometry and missing texture. We therefore tackle this challenge by-->
 <!--            cultivating the dark knowledge of pretrained 2D diffusion models.-->
 <!--        </p>-->
-        <div>
-            <img src="./static/images/pipeline.png" alt="method" class="center">
-          </div>
+            <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/pipeline.mp4"
+                type="video/mp4">
+            </video>
+<!--        <div>-->
+<!--            <img src="./static/images/pipeline.png" alt="method" class="center">-->
+<!--          </div>-->
+            <div class="paragraph">
         <p>
-            <span class="dnerf">StyleDreamer</span>:
-    Our method generates a 3D head avatar whose content and style are consistent with the given portrait image and style prompts, respectively.
-    (0) Given a front-view portrait image, novel views are synthesized by a 3D GAN, as reference images.
-    (1) An image is rendered from NeRF at a training pose.
-    (2) The rendered image is sent to InsturctPix2Pix, conditioned by corresponding reference image and style prompt, as well as the score of the rendered image distribution (estimated by LoRA) to compute the gradient of CSD.
-    (3) The NeRF is updated by the gradient of CSD, and LoRA is also updated on the rendered image.
+          <span class="dnerf">StyleDreamer</span>:
+    Our method generates a 3D head avatar whose content and style are consistent with the given portrait image and style prompts, respectively. <br>
+        <ol>
+          <li> <b>Sampling.</b> Given a front-view portrait image, novel views are synthesized by a 3D GAN, as reference images. </li>
+          <li> <b>Rendering.</b> Given the sampled primary view and auxiliary view, two images are rendered from NeRF, respectively. </li>
+          <li> <b>Gradient of CSD.</b> The rendered images are sent to image editing diffusion, conditioned on corresponding reference images and the style prompt, as well as the LoRA to compute the gradient of CSD. </li>
+          <li><b>Gradient of MV-CSD.</b> The auxiliary gradient is warped via both two views and the primary depth map. Then, we mixup the primary gradient and warped auxiliary gradient to compute the gradient of MV-CSD. <br></li>
+                <li> <b>Optimzation.</b> The NeRF is updated by the gradient of MV-CSD.  The LoRA is updated on the rendered images.</li>
+            </ol>
         </p>
-          </div>
-      </div>
-    </div>
+            </div>
+<!--      </div>-->
+<!--        <p>-->
+<!--            -->
+<!--    (0) -->
+<!--    (1) -->
+<!--            (2) -->
+<!--    (3) -->
+<!--    (4) -->
+<!--        </p>-->
+
+<!--      </div>-->
+
     <!--/ Paper video. -->
+            </div>
   </div>
 </section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">More Results</h2>
+          </div>
+    <div class="hero-results">
+      <img src="./static/videos/person_1.gif" alt="method" class="center">
+    </div>
+      <div class="hero-results">
+      <img src="./static/videos/person_2.gif" alt="method" class="center">
+    </div>
+      <div class="hero-results">
+      <img src="./static/videos/person_3.gif" alt="method" class="center">
+    </div>
+      <div class="hero-results">
+      <img src="./static/videos/person_4.gif" alt="method" class="center">
+    </div>
+      <div class="hero-results">
+      <img src="./static/videos/person_5.gif" alt="method" class="center">
+
+    </div>
+  </div>
+</section>
+
 
 <!--<section class="section">-->
 <!--    <div class="container is-max-desktop">-->
